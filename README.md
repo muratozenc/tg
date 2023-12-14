@@ -1,6 +1,6 @@
 # Laravel 10 - Therapist Calendar
 
-In this project, focused the appointment system therapists and their clients who has the possibility to live in different time zones.
+Project is focused the appointment system therapists and their clients who has the possibility to live in different time zones.
 
 ## Introduction
 This project is developed using Laravel 10 and includes Laravel Breeze for the user interface. It's designed to handle user management efficiently with a pre-configured database seeder.
@@ -38,8 +38,21 @@ class UserSeeder extends Seeder
                 'email_verified_at' => '2023-01-01 00:00:00',
                 'user_type' => 'client',
                 'timezone' => ''
-            ],
-            // ... other users ...
+            ],[
+                'name'=>'Client Two',
+                'email'=>'two@client.tgo',
+                'password'=> Hash::make('ClientTwo'),
+                'email_verified_at' => '2023-01-01 00:00:00',
+                'user_type' => 'client',
+                'timezone' => ''
+            ],[
+                'name'=>'The Therapist',
+                'email'=>'the@therapist.tgo',
+                'password'=> Hash::make('TheTherapist'),
+                'email_verified_at' => '2023-01-01 00:00:00',
+                'user_type' => 'therapist',
+                'timezone' => ''
+            ]
         ];
 
         foreach($users as $user){
